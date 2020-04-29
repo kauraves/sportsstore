@@ -7,4 +7,4 @@ export const loadData = (dataType) => ({
         dataType: dataType,
         data: phData[dataType]
     }
-});
+}); 
