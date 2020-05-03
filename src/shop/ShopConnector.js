@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect } 
-    from "react-router-dom"
+import { Switch, Route, Redirect } from "react-router-dom"
 import { connect } from "react-redux";
 import * as ShopActions from "../data/ActionCreators";
 import { DataTypes } from "../data/Types";
@@ -37,9 +36,8 @@ export const ShopConnector = connect(ds => ds, mapDispatchToProps)(
 
         render() {
             return <Switch>
-                <Redirect from="/shop/products/:category" 
-                    to="/shop/products/:category/1" exact={ true } />                
-                <Route path={ "/shop/:section?/:category?/:page?"}
+                <Redirect from="/shop/products/:category" to="/shop/products/:category/1" exact={ true } />                
+                <Route path={ "/shop/:section?/:category?/:page?"} 
                     render = { routeProps => this.selectComponent(routeProps) } />  
             </Switch>          
         }
